@@ -1,41 +1,32 @@
-# Prerequisites
-*.d
+# Binaries
+bin/
+*.so
+*.dll
+*.dylib
+*.framework
+*.wasm
 
-# Compiled Object files
-*.slo
-*.lo
+# Build artifacts
 *.o
 *.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
 *.a
 *.lib
 
-# Executables
-*.exe
-*.out
-*.app
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 
-# debug information files
-*.dwo
+# OS
+.DS_Store
+Thumbs.db
+
+# Godot
+*.import
+.godot/
+
+# Build system
+.sconsign.dblite
+.scons-cache/
