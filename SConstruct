@@ -17,6 +17,11 @@ sources = [
     Glob("src/*.cpp"),
 ]
 
+# Generate documentation from XML files (for editor and template builds)
+if env["target"] in ["editor", "template_debug", "template_release"]:
+    doc_data = env.GodotCPPDocData("src/gen/doc_data.gen.cpp", source=Glob("doc_classes/*.xml"))
+    sources.append(doc_data)
+
 # Disable 32 bit narrowing error.
 if env["platform"] != "windows":
     env.Append(CCFLAGS=["-Wno-c++11-narrowing"])
