@@ -4,9 +4,11 @@ A GDExtension for Godot Engine providing lasso/selection tool functionality.
 
 ## Features
 
-- Lasso tool for selecting and manipulating points
+- Lasso tool for selecting and manipulating points using Voronoi-based selection
+- Delaunay triangle refinement for precise object selection in VR
 - Cross-platform support (Windows, macOS, Linux, iOS, Android, Web)
 - Single and double precision float support
+- Full documentation integrated into Godot editor
 
 ## Requirements
 
