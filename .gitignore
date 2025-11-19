@@ -6,6 +6,9 @@ bin/
 *.framework
 *.wasm
 
+# But track gdextension files
+!bin/addons/**/*.gdextension
+
 # Build artifacts
 *.o
 *.obj
