@@ -31,11 +31,17 @@ jobs:
           float-precision: ${{ matrix.precision }}
           build-target-type: template_release
 
+      - name: Copy gdextension file
+        run: |
+          mkdir -p ${{ github.workspace }}/bin/addons/godot_lasso
+          cp ${{ github.workspace }}/bin/addons/godot_lasso/godot_lasso.gdextension ${{ github.workspace }}/bin/addons/godot_lasso/ || true
+
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: Godot_Lasso
           path: |
             ${{ github.workspace }}/bin/**/*.so
+            ${{ github.workspace }}/bin/addons/godot_lasso/godot_lasso.gdextension
           if-no-files-found: error  
 
